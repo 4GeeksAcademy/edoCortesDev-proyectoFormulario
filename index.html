@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,140 +7,133 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet"
-          href="style.css">
-    <title>Ejemplo de formulario de pago</title>
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Payment Form</title>
 </head>
 <body>
-<div class="formulario-pago">
-
-    <form>
-        <!-- ==HEADER== -->
-        <!-- Fila de tarjeta, CVC y monto -->
-        <!-- --Titulo del formulario-- -->
-        <h1>Ejemplo de formulario de pago</h1>
-        <div class="error-message">
-            <span>Faltan algunos campos por completar</span>
-        </div>
-        <div class="fila">
-            <fieldset class="grupo-formulario">
-                <label for="card-number">Número de tarjeta</label>
-                <input type="text"
-                       id="card-number"
-                       placeholder="XXXXXXXXXXXXXXX"
-                       required>
-            </fieldset>
-            <fieldset class="grupo-formulario">
-                <label for="cvc">CVC</label>
-                <input type="text"
-                       id="cvc"
-                       placeholder="0000"
-                       required>
-            </fieldset>
-            <fieldset class="grupo-formulario">
-                <label for="amount">Monto</label>
-                <div class="fila">
-                    <span>$</span>
-                    <input type="text"
-                           id="amount"
-                           placeholder="Ingresa el monto"
-                           required>
+<div class="row justify-content-center mt-5">
+    <div class="col-md-10 offset-md-1">
+        <div class="card card-outline-secondary">
+            <div class="card-header">
+                <h3 class="mb-0">Payment Form Example</h3>
+            </div>
+            <div class="card-body">
+                <div id="error-msg"
+                     class="alert alert-danger">Some fields are missing
                 </div>
-            </fieldset>
-        </div>
-
-        <!-- Fila de información personal -->
-        <div class="fila">
-            <!-- Columna 1 -->
-            <div class="columna">
-                <fieldset>
-                    <label for="nombre">Nombre</label>
-                    <input type="text"
-                           id="nombre"
-                           placeholder="Ingresa tu nombre"
-                           required>
-                </fieldset>
-                <fieldset>
-                    <label for="ciudad">Ciudad</label>
-                    <input type="text"
-                           id="ciudad"
-                           placeholder="Ingresa tu ciudad"
-                           required>
-                </fieldset>
-                <fieldset>
-                    <label>Aceptamos:</label>
-                    <div class="opciones-pago">
-                        <input type="radio"
-                               id="cash"
-                               name="metodo-pago"
-                               required>
-                        <label for="cash">
-                            <i class="fa-regular fa-money-bill-1"></i>
-                        </label>
-                        <input type="radio"
-                               id="cc"
-                               name="metodo-pago">
-                        <label for="cc">
-                            <i class="fa-solid fa-credit-card"></i>
-                        </label>
-                        <input type="radio"
-                               id="paypal"
-                               name="metodo-pago">
-                        <label for="paypal">
-                            <i class="fa-brands fa-cc-paypal"></i>
-                        </label>
-                        <input type="radio"
-                               id="applepay"
-                               name="metodo-pago">
-                        <label for="applepay">
-                            <i class="fa-brands fa-cc-apple-pay"></i>
-                        </label>
+                <form method="post"
+                      action="#">
+                    <div class="row mt-4">
+                        <div class="col-sm-5 pb-3">
+                            <label for="exampleAccount">Card #</label>
+                            <input class="form-control"
+                                   id="exampleAccount"
+                                   placeholder="XXXXXXXXXXXXXXXX"
+                                   type="text">
+                        </div>
+                        <div class="col-sm-3 pb-3">
+                            <label for="exampleCtrl">CVC #</label>
+                            <input class="form-control"
+                                   id="exampleCtrl"
+                                   placeholder="0000"
+                                   type="text">
+                        </div>
+                        <div class="col-sm-4 pb-3">
+                            <label for="exampleAmount">Amount</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input class="form-control"
+                                       id="exampleAmount"
+                                       placeholder="Amount"
+                                       type="number">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 pb-3">
+                            <label for="exampleFirst">First Name</label>
+                            <input class="form-control"
+                                   id="exampleFirst"
+                                   type="text">
+                        </div>
+                        <div class="col-sm-6 pb-3">
+                            <label for="exampleLast">Last Name</label>
+                            <input class="form-control"
+                                   id="exampleLast"
+                                   type="text">
+                        </div>
+                        <div class="col-sm-6 pb-3">
+                            <label for="exampleCity">City</label>
+                            <input class="form-control"
+                                   id="exampleCity"
+                                   type="text">
+                        </div>
+                        <div class="col-sm-3 pb-3">
+                            <label for="exampleSt">State</label>
+                            <select class="form-control"
+                                    id="exampleSt">
+                                <option>Pick a state</option>
+                                <option>Valparaíso</option>
+                                <option>Metropolitana</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3 pb-3">
+                            <label for="exampleZip">Postal Code</label>
+                            <input class="form-control"
+                                   id="exampleZip"
+                                   type="text">
+                        </div>
+                        <div class="col-md-6 pb-3">
+                            <p>We accept:</p>
+                            <div class="btn-group"
+                                 role="group">
+                                <label class="btn btn-secondary">
+                                    <input type="radio"
+                                           name="payment"
+                                           autocomplete="off">
+                                    <i class="fa-regular fa-money-bill-1"></i>
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio"
+                                           name="payment"
+                                           autocomplete="off">
+                                    <i class="fa-solid fa-credit-card"></i>
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio"
+                                           name="payment"
+                                           autocomplete="off">
+                                    <i class="fa-brands fa-cc-paypal"></i>
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio"
+                                           name="payment"
+                                           autocomplete="off">
+                                    <i class="fa-brands fa-cc-apple-pay"></i>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pb-3">
+                            <label for="exampleMessage">Message</label>
+                            <textarea class="form-control"
+                                      id="exampleMessage"
+                                      rows="3"></textarea>
+                            <small class="text-muted">Add any notes here.</small>
+                        </div>
                     </div>
-                </fieldset>
+                </form>
             </div>
-
-            <!-- Columna 2 -->
-            <div class="columna">
-                <fieldset>
-                    <label for="apellido">Apellido</label>
-                    <input type="text"
-                           id="apellido"
-                           placeholder="Ingresa tu apellido"
-                           required>
-                </fieldset>
-                <div class="fila-2">
-                    <fieldset class="grupo-formulario">
-                        <label for="estado">Región</label>
-                        <select id="estado"
-                                required>
-                            <option value="">Selecciona un estado</option>
-                            <option value="ny">Valparaíso</option>
-                            <option value="ca">Metropolitana</option>
-                        </select>
-                    </fieldset>
-                    <fieldset class="grupo-formulario">
-                        <label for="codigo-postal">Código Postal</label>
-                        <input type="text"
-                               id="codigo-postal"
-                               placeholder="Ingresa tu código postal"
-                               required>
-                    </fieldset>
+            <div class="card-footer">
+                <div class="float-end">
+                    <button class="btn btn-secondary"
+                            type="reset">Cancel
+                    </button>
+                    <button class="btn btn-primary"
+                            type="submit">Send
+                    </button>
                 </div>
-                <fieldset>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje"
-                              rows="4"
-                              placeholder="Añade cualquier nota aquí"></textarea>
-                    <p class="nota">Añade cualquier nota aquí.</p>
-                </fieldset>
             </div>
         </div>
-        <div class="actions">
-            <button type="button"
-                    class="cancel">Cancelar
-            </button>
-            <button type="submit">Enviar</button>
-        </div>
-    </form>
+    </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
