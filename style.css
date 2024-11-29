@@ -1,0 +1,135 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo del cuerpo */
+body {
+    background-color: #f5f5f5;
+}
+
+/* Contenedor del formulario */
+.formulario-pago {
+    width: 1000px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del formulario */
+.formulario-pago h1 {
+    border-radius: 8px 8px 0 0;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Mensaje de error */
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    margin: 20px;
+    font-size: 14px;
+}
+
+fieldset {
+    border: 0;
+}
+
+/* Estilo de filas */
+.fila {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 20px;
+}
+
+.fila-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Columnas */
+.columna {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+/* Grupos de formulario */
+.grupo-formulario {
+    flex: 1;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Opciones de pago */
+.opciones-pago {
+    display: flex;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    width: 40%;
+}
+
+/* Inputs y Select */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    font-size: 14px;
+}
+
+/* Aplica margen a todos los labels excepto los que están en las opciones de radio */
+label:not(.opciones-pago label) {
+    margin: 10px 0;
+}
+
+/* Nota */
+.nota {
+    margin: 10px 0;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* ==FOOTER== */
+/* --botones-- */
+.actions {
+    border-radius: 0 0 8px 8px;
+    background-color: #f0f0f0;
+    text-align: right;
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.cancel {
+    background-color: #ccc;
+    margin-right: 10px;
+}
